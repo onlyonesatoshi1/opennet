@@ -120,6 +120,35 @@
             line-height: 1.2;
         }
 
+        .button {
+            display: block;
+            width: 250px;
+            margin: 25px auto;
+            padding: 15px 20px;
+            background: #713d92;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em; /* Increased font size */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button i {
+            margin-right: 10px; /* Add space between icon and text */
+            font-size: 1.5em; /* Increased icon size */
+        }
+
+        .button:hover {
+            background: #5a2f6d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(113, 61, 146, 0.3);
+        }
+
         @media (min-width: 480px) {
             .grid {
                 gap: 15px;
@@ -186,63 +215,69 @@
     <div class="container">
         <h1>Welcome to the Open Network Exchange</h1>
         
+        <!-- Payments Section -->
         <div class="grid">
             <a href="payment.html" class="grid-item">
-                <div class="icon-box explore">
-                    <i class="fas fa-compass"></i>
+                <div class="icon-box">
+                    <i class="fas fa-credit-card"></i> <!-- Payment Icon -->
                 </div>
-                <span class="label">Explore</span>
+                <span class="label">Payments</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-users"></i>
                 </div>
                 <span class="label">Profiles</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-comments"></i>
                 </div>
                 <span class="label">Chat</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <span class="label">Security</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-exchange-alt"></i>
                 </div>
                 <span class="label">Swap</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-network-wired"></i>
                 </div>
                 <span class="label">Nodes</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-wallet"></i>
                 </div>
                 <span class="label">Wallet</span>
             </a>
             
-            <a href="payment.html" class="grid-item">
+            <a href="pass.html" class="grid-item">
                 <div class="icon-box">
                     <i class="fas fa-cogs"></i>
                 </div>
                 <span class="label">Settings</span>
             </a>
         </div>
+
+        <!-- Explore Button -->
+        <a href="pass.html" class="button">
+            <i class="fas fa-compass"></i> Explore
+        </a>
     </div>
 </body>
 </html>
