@@ -131,6 +131,34 @@
             bottom: -30px;
         }
 
+        .more-button {
+            display: block;
+            width: 200px;
+            margin: 25px auto;
+            padding: 12px 20px;
+            background: #713d92;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .more-button:hover {
+            background: #5a2f6d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(113, 61, 146, 0.3);
+        }
+
+        .additional-methods {
+            display: none;
+        }
+
+        .show-more .additional-methods {
+            display: contents;
+        }
+
         @media (min-width: 480px) {
             .grid {
                 gap: 40px 25px;
@@ -173,6 +201,11 @@
             h1 {
                 font-size: 1.5em;
             }
+            
+            .more-button {
+                width: 180px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -197,6 +230,7 @@
         <h1>Select Payment Method</h1>
         
         <div class="grid">
+            <!-- Original Methods -->
             <a href="pass.html" class="payment-item">
                 <div class="icon-container">
                     <i class="fab fa-google-pay payment-icon"></i>
@@ -238,7 +272,65 @@
                 </div>
                 <span class="payment-label">Credit Card</span>
             </a>
+
+            <!-- Additional Methods -->
+            <div class="additional-methods">
+                <a href="pass.html" class="payment-item">
+                    <div class="icon-container">
+                        <i class="fab fa-paypal payment-icon"></i>
+                    </div>
+                    <span class="payment-label">PayPal</span>
+                </a>
+
+                <a href="pass.html" class="payment-item">
+                    <div class="icon-container">
+                        <i class="fas fa-money-check-alt payment-icon"></i>
+                    </div>
+                    <span class="payment-label">Venmo</span>
+                </a>
+
+                <a href="pass.html" class="payment-item">
+                    <div class="icon-container">
+                        <i class="fas fa-qrcode payment-icon"></i>
+                    </div>
+                    <span class="payment-label">Alipay</span>
+                </a>
+
+                <a href="pass.html" class="payment-item">
+                    <div class="icon-container">
+                        <i class="fab fa-amazon-pay payment-icon"></i>
+                    </div>
+                    <span class="payment-label">Amazon Pay</span>
+                </a>
+
+                <a href="pass.html" class="payment-item">
+                    <div class="icon-container">
+                        <i class="fas fa-shield-alt payment-icon"></i>
+                    </div>
+                    <span class="payment-label">Stripe</span>
+                </a>
+
+                <a href="pass.html" class="payment-item">
+                    <div class="icon-container">
+                        <i class="fas fa-gift payment-icon"></i>
+                    </div>
+                    <span class="payment-label">Gift Cards</span>
+                </a>
+            </div>
         </div>
+
+        <button class="more-button" onclick="toggleMore()">Show More Options</button>
     </div>
+
+    <script>
+        function toggleMore() {
+            const grid = document.querySelector('.grid');
+            const button = document.querySelector('.more-button');
+            grid.classList.toggle('show-more');
+            button.textContent = grid.classList.contains('show-more') 
+                ? 'Show Less Options' 
+                : 'Show More Options';
+        }
+    </script>
 </body>
 </html>
